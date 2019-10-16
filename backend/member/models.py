@@ -1,6 +1,7 @@
-from django.db import models
+from django.db import model
 
 # Create your models here.
+
 class Member(models.Model):
 
     Male = 'M'

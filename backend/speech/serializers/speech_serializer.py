@@ -6,4 +6,4 @@ class SpeechSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Speech
-        fields = ('id', '', 'tittle', 'preacher')
+        fields = ('id', 'date', 'title', 'preacher')

@@ -19,5 +19,5 @@ from django.conf.urls import url, include
 urlpatterns = [
     url('admin/', admin.site.urls),
     url('api/v1/members/', include('member.urls')),
-    url('api/v1/speech',include('speech.urls'))
+    url('api/v1/speeches/',include('speech.urls'))
 ]

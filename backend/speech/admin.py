@@ -3,7 +3,7 @@ from .models import Speech
 
 
 class SpeechAdmin(admin.ModelAdmin):
-    list_display = ('tittle', 'preacher', 'date')
+    list_display = ('title', 'date')
 
 
 admin.site.register(Speech, SpeechAdmin,)

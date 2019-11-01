@@ -18,14 +18,16 @@ export class MemberServiceService {
         map(res => {
           let members: Member[] = [];
           res.forEach(object => {
-            let member = new Member(object.id, object.first_name, object.last_name, object.phone_number);
+            let member = new Member(object.id, object.first_name, object.last_name, object.phone_number,object.sex);
             members.push(member)
           });
           return members;
         })
       );
   }
-
+  public getMemberInfo(id: string){
+    return this.http.get<any>(`${this.apiUrl}/${id}`);
+  }  
   
   }
 

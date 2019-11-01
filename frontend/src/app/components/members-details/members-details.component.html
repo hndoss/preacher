@@ -1,7 +1,20 @@
-<div class="main">
-    <div class="row" *ngFor="let member of members">
-      <a>{{ member}}</a>
-    </div>
-  </div>
-  
+<div class ="row">
+  <div class = "col-sm-4 mx-auto"><hr>
+    <hr><hr><h5>Info</h5>
+    <form (submit)="submitId(id)">
+      <input class="form-group" type="text" placeholder="Member Id" #id>
+      <button class="btn btn-warning mt-2">Send</button>
+    </form>
+
+    first name: {{memberInfo.first_name}}<br>
+    last name: {{memberInfo.last_name}}<br>
+    phone number: {{memberInfo.phone_number}}<br>
+    sex: {{memberInfo.sex}}
+
+      
+    
+  </div>  
+</div>
+
+
  

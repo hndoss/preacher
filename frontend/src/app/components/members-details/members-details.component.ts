@@ -9,12 +9,29 @@ import { Member } from '../../models/member'
 })
 export class MembersDetailsComponent implements OnInit {
 
+  memberInfo = {};
+
   constructor(private memberService: MemberServiceService) { }
 
   ngOnInit() {
-    
+
+   
   }
 
+  private getMemberInfo(id: string){
+    this.memberService.getMemberInfo(id).subscribe(
+      res=>{
+        console.log(res);
+        this.memberInfo = res;
+      }
+    );
+  }
 
-
+  submitId(id : HTMLInputElement){
+    this.getMemberInfo(id.value);
+    return false;
+  }
 }
+
+
+

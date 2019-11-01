@@ -9,6 +9,7 @@ import { MembersDetailsComponent } from './components/members-details/members-de
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AppRoutingModule } from './app-routing.module';
+import { MembersComponent } from './components/members/members.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AppRoutingModule } from './app-routing.module';
     SpeechListComponent,
     MembersDetailsComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    MembersComponent
   ],
   imports: [
     HttpClientModule,

@@ -1,14 +1,6 @@
-<div class ="sidenav">
-    <br>
-    <br>
-    <h2>Members:</h2>
-    <div class="row" *ngFor="let member of members">
-        <a href="#">{{ member.first_name }}</a>
-    </div>
-</div>
-
-<div class = "main">
-    <app-speech-list></app-speech-list>
-</div>
+<h2>Members:</h2>
+<div *ngFor="let member of members">
+    <a href="#">{{ member.first_name }}</a>
+</div>    
 
 

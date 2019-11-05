@@ -8,7 +8,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgb(3, 177, 90);
+    background-color: rgb(16, 223, 119);
     overflow-x: hidden;
     padding-top: 20px;
   }
@@ -39,3 +39,5 @@
   .center-text{
     text-align: center;
   }
+
+ 

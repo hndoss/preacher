@@ -3,7 +3,7 @@ name: build
 on:
   push:
     branches:
-    - add-pipeline
+    - staging
 
 jobs:
   build:
@@ -15,4 +15,5 @@ jobs:
       uses: actions/checkout@master
 
     - run: |
-        echo hello world.
+        cd backend
+        docker build -t preacher .

@@ -1,16 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MemberListComponent } from './components/member-list/member-list.component';
-import { SpeechListComponent } from './components/speech-list/speech-list.component';
-import { MembersComponent } from './components/members/members.component';
 
 const routes: Routes = [
-  { path: 'members', component: MembersComponent },
-  { path: 'speeches', component: SpeechListComponent }
+  { 
+    path: 'members', 
+    loadChildren: './members/members.module#MembersModule'
+  },
+  {
+    path: 'speeches',
+    loadChildren: './speeches/speeches.module#SpeechesModule'
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
+  exports: [
+    RouterModule
+  ]
 })
+
 export class AppRoutingModule { }

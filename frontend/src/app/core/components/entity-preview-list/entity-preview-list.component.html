@@ -1,0 +1,35 @@
+<h1>{{ title }}</h1>
+<h3 class="font-italic">{{ subtitle }}</h3>
+
+<div class="row">
+  <div class="col-3 col-md-offset-2 card" *ngFor="let entity of entities">
+    <div class="card-body"></div>
+    <div class="card-text" *ngFor="let property of properties">
+      {{property.name}}: {{entity[property.value]}}    
+    </div>
+    <button class="btn btn-sm btn-outline-dark" (click)="clickOnEntity(entity)">Details</button>  
+  </div>
+  
+</div>
+
+<!-- <div class="container border">
+  <div class="row headers">
+
+    <div class="col border" *ngFor="let property of properties">
+      {{property.name}}
+    </div>
+    
+  </div>
+
+  <div class="row" *ngFor="let entity of entities">
+
+    <div class="col border" *ngFor="let property of properties">
+      {{entity[property.value]}}
+    </div>
+
+    <div class="col border">
+      <button class="btn btn-outline-dark" (click)="clickOnEntity(entity)">Details</button>
+    </div>
+
+  </div>
+</div> -->

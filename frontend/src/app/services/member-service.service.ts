@@ -8,26 +8,26 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class MemberServiceService {
-  private apiUrl =  "http://localhost:8000/api/v1/members/preachers";
+  private apiUrl = "http://localhost:8000/api/v1/members/preachers";
 
   constructor(private http: HttpClient) { }
 
-  public getMembers(): Observable<Member[]>{
+  public getMembers(): Observable<Member[]> {
     return this.http.get<any>(this.apiUrl)
       .pipe(
         map(res => {
           let members: Member[] = [];
           res.forEach(object => {
-            let member = new Member(object.id, object.first_name, object.last_name, object.phone_number,object.sex);
+            let member = new Member(object.id, object.first_name, object.last_name, object.phone_number, object.sex);
             members.push(member)
           });
+          console.log(members);
           return members;
         })
       );
   }
-  public getMemberInfo(id: string){
+  public getMemberInfo(id: string) {
     return this.http.get<any>(`${this.apiUrl}/${id}`);
-  }  
-  
   }
 
+}

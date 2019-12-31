@@ -2,18 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { CoreModule } from '../core/core.module';
-import { MemberListComponent } from './components/members-list/members-list.component';
+import { MembersListComponent } from './components/members-list/members-list.component';
 
 const routes: Routes = [
   { 
     path: '', 
-    component: MemberListComponent
+    component: MembersListComponent
   }
 ];
 
 @NgModule({
   declarations: [
-    MemberListComponent
+    MembersListComponent
   ],
   imports: [
     CommonModule,

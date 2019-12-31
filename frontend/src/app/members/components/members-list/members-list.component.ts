@@ -7,12 +7,12 @@ import { Member } from '../../../models/member'
   templateUrl: './members-list.component.html',
   styleUrls: ['./members-list.component.css']
 })
-export class MemberListComponent implements OnInit {
+export class MembersListComponent implements OnInit {
   title = "Members"
-  subtitle = "**"
+  subtitle = "General list"
   properties = [
-    { "name": "Id", "value": "id" },
-    { "name": "Username", "value": "username" }
+    { "name": "Firstname", "value": "first_name" },
+    { "name": "Lastname", "value": "last_name" }
   ]
   members: Member[];
 

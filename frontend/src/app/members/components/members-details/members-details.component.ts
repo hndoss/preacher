@@ -15,19 +15,19 @@ export class MembersDetailsComponent implements OnInit {
 
   ngOnInit() {
 
-   
+
   }
 
-  private getMemberInfo(id: string){
+  private getMemberInfo(id: string) {
     this.memberService.getMemberInfo(id).subscribe(
-      res=>{
+      res => {
         console.log(res);
         this.memberInfo = res;
       }
     );
   }
 
-  submitId(id : HTMLInputElement){
+  submitId(id: HTMLInputElement) {
     this.getMemberInfo(id.value);
     return false;
   }

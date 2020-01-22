@@ -1,17 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
-import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
-
 @Component({
   selector: 'core-entity-details',
   templateUrl: './entity-details.component.html',
   styleUrls: ['./entity-details.component.css']
 })
+
 export class EntityDetailsComponent implements OnInit {
+  
+  @Input() title: string;
+  @Input() subtitle: string;
 
   constructor(
-    private modalService: NgbModal,
-    private fb: FormBuilder) { }
+    private modalService: NgbModal
+    ) { }
 
   ngOnInit() { }
 

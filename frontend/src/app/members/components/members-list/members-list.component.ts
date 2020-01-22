@@ -8,7 +8,7 @@ import { Member } from '../../../models/member'
   styleUrls: ['./members-list.component.css']
 })
 export class MembersListComponent implements OnInit {
-  title = "Members"
+  title = "My Members"
   subtitle = "General list"
   properties = [
     { "name": "Firstname", "value": "first_name" },

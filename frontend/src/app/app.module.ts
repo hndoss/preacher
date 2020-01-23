@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FullCalendarModule } from '@fullcalendar/angular'; 
 import { CoreModule } from './core/core.module';
 import { MembersModule } from './members/members.module';
 import { HomeComponent } from './components/home/home.component';
@@ -22,7 +23,8 @@ import { HomeComponent } from './components/home/home.component';
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    MembersModule
+    MembersModule,
+    FullCalendarModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

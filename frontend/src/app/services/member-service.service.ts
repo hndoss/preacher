@@ -21,7 +21,6 @@ export class MemberServiceService {
             let member = new Member(object.id, object.first_name, object.last_name, object.phone_number, object.sex);
             members.push(member)
           });
-          console.log(members);
           return members;
         })
       );

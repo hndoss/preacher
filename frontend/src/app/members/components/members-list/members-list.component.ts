@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MemberServiceService } from '../../../services/member-service.service';
 import { Member } from '../../../models/member';
-import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+
 
 @Component({
   selector: 'members-members-list',
@@ -34,7 +33,7 @@ export class MembersListComponent implements OnInit {
     this.memberService.getMembers()
       .subscribe((members: Member[]) => {
         this.members = members;
-    });
+      });
   }
 
   private showDetailsOfMember(entity) {

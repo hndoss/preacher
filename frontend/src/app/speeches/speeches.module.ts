@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CoreModule } from '../core/core.module';
 import { SpeechListComponent } from './components/speech-list/speech-list.component';
 import { SpeechDetailsComponent } from './components/speech-details/speech-details.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 const routes: Routes = [
   { 
@@ -20,7 +21,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    CoreModule
+    CoreModule,
+    FullCalendarModule 
   ]
 })
 export class SpeechesModule { }

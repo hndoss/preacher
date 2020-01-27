@@ -11,10 +11,13 @@ const routes: Routes = [
     path: 'members', 
     loadChildren: './members/members.module#MembersModule'
   },
+
+
   {
     path: 'speeches',
     loadChildren: './speeches/speeches.module#SpeechesModule'
   }
+  
 ];
 
 @NgModule({

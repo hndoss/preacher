@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MemberServiceService } from '../../../services/member-service.service';
-import { Member } from '../../../models/member'
+import { Member } from '../../../models/member';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'members-members-list',
@@ -8,7 +11,7 @@ import { Member } from '../../../models/member'
   styleUrls: ['./members-list.component.css']
 })
 export class MembersListComponent implements OnInit {
-  title = "Members"
+  title = "My Members"
   subtitle = "General list"
   properties = [
     { "name": "Firstname", "value": "first_name" },
@@ -16,7 +19,11 @@ export class MembersListComponent implements OnInit {
   ]
   members: Member[];
 
-  constructor(private memberService: MemberServiceService) { }
+  constructor(
+    private memberService: MemberServiceService,
+    private router: Router
+    ) 
+  { }
 
   ngOnInit() {
     this.getMembers();
@@ -32,7 +39,7 @@ export class MembersListComponent implements OnInit {
 
   private showDetailsOfMember(entity) {
     console.log("Updating " + entity + " and triggering modal ");
-    // this.router.navigate([`${this.router.url}/${entity.id}`]);
+    this.router.navigate([`${this.router.url}/${entity.id}`]);
   }
 
 }

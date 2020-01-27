@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MemberServiceService } from '../../../services/member-service.service';
 import { Member } from '../../../models/member'
 
@@ -16,7 +17,10 @@ export class MembersListComponent implements OnInit {
   ]
   members: Member[];
 
-  constructor(private memberService: MemberServiceService) { }
+  constructor(
+    private memberService: MemberServiceService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.getMembers();
@@ -27,12 +31,12 @@ export class MembersListComponent implements OnInit {
     this.memberService.getMembers()
       .subscribe((members: Member[]) => {
         this.members = members;
-    });
+      });
   }
 
   private showDetailsOfMember(entity) {
     console.log("Updating " + entity + " and triggering modal ");
-    // this.router.navigate([`${this.router.url}/${entity.id}`]);
+    this.router.navigate([`${this.router.url}/${entity.id}`]);
   }
 
 }

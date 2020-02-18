@@ -39,6 +39,8 @@ export class MembersListComponent implements OnInit {
   private showDetailsOfMember(entity) {
     console.log("Updating " + entity + " and triggering modal ");
     this.router.navigate([`${this.router.url}/${entity.id}`]);
+    /*this.router.navigate(["/members",entity.id])*/
+    
   }
 
 }

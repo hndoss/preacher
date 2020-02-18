@@ -21,10 +21,10 @@ import { HomeComponent } from './components/home/home.component';
   imports: [
     HttpClientModule,
     BrowserModule,
-    AppRoutingModule,
     CoreModule,
     MembersModule,
-    FullCalendarModule 
+    FullCalendarModule,
+    AppRoutingModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

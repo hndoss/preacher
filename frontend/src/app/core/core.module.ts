@@ -6,7 +6,7 @@ import { EntityDetailsComponent } from './components/entity-details/entity-detai
 @NgModule({
   declarations: [
     EntityListPreviewComponent, 
-    EntityDetailsComponent
+    EntityDetailsComponent,
   ],
   exports: [
     EntityListPreviewComponent, 

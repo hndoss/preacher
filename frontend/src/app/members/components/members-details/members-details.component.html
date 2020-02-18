@@ -1,36 +1,32 @@
-<!--
-  <table align="left">
-  <tr>
-    <th>Member Details</th>
-  </tr>
-  <tr>
-    <td>
-  <tr>
-
-    <div class="col-sm-15 mx-auto">
-      <form (submit)="submitId(id)">
-        <input class="form-group" type="text" placeholder="Member Id" #id>
-        <button class="btn btn-warning mt-2">Send</button>
-      </form>
-    </div>
-
-  </tr>
-
-  <tr>first name: {{memberInfo.first_name}}<br></tr>
-  <tr> name: {{memberInfo.last_name}}<br></tr>
-  <tr>phone number: {{memberInfo.phone_number}}<br></tr>
-  <tr>sex: {{memberInfo.sex}}</tr>
-
-  </td>
-  </tr>
-</table>
---> 
-
-<h2>Members</h2>
-<!--<div *ngIf="member | async as member">
-  <h3>"{{ member.name }}"</h3>
-  <div>
-    <label>Id: </label>{{ member.id }}</div>-->
-   
-  
-<!--</div>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <table class="table">
+    <thead>
+      <h1>Details</h1>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Firtsname:</td>
+        <td>{{member.name}}</td>
+      </tr>
+      <tr>
+        <td>Lastname:</td>
+        <td>{{member.id}}</td>
+      </tr>
+      <tr>
+        <td>Phone-number:</td>
+        <td></td>   
+      </tr>
+      <tr>
+        <td>sex:</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
